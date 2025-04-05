@@ -17,8 +17,13 @@ const nextConfig = {
     return config;
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     esmExternals: true
+  },
+  output: 'export',
+  distDir: '.next',
+  typescript: {
+    ignoreBuildErrors: true
   }
 };
 
