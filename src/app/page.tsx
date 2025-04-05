@@ -52,7 +52,7 @@ export default function Home() {
                 strings: [
                   'Full-stack Developer',
                   'Machine Learning Engineer',
-                  'UI/UX Enthusiast'
+                  'Backend Developer'
                 ],
                 autoStart: true,
                 loop: true,
