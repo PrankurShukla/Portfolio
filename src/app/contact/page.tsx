@@ -1,9 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { Button, Card, Input, Textarea } from "@/components/ui"
 import { motion } from "framer-motion"
 import { Send, Github, Linkedin, Mail, MessageSquare, Sparkles, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"

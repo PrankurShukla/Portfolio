@@ -1,10 +1,9 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import { Button, Card } from "@/components/ui"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, GraduationCap, Briefcase, Code, Award } from "lucide-react"
-import { Card } from "@/components/ui/card"
 
 const container = {
   hidden: { opacity: 0 },
