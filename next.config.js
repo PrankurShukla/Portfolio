@@ -6,6 +6,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['github.com'],
+    unoptimized: true
   },
   transpilePackages: ['lucide-react'],
   webpack: (config) => {
@@ -15,6 +16,10 @@ const nextConfig = {
     };
     return config;
   },
+  experimental: {
+    optimizeCss: true,
+    esmExternals: true
+  }
 };
 
 module.exports = nextConfig; 
