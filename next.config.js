@@ -5,6 +5,14 @@ const nextConfig = {
   images: {
     domains: ['github.com'],
   },
+  transpilePackages: ['lucide-react'],
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': './src',
+    };
+    return config;
+  },
 };
 
 module.exports = nextConfig; 
