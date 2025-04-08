@@ -44,7 +44,7 @@ export default function Home() {
           className="space-y-6"
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">
-            Hi, I'm Prankur Shukla
+            I'm Prankur Shukla
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground h-[60px] flex items-center justify-center">
             <Typewriter
