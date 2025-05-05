@@ -6,6 +6,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, Code2, Database, Layout, Github, Linkedin, Mail } from "lucide-react"
 import Typewriter from 'typewriter-effect'
+import Image from "next/image"
 
 const container = {
   hidden: { opacity: 0 },
@@ -43,61 +44,76 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">
-            I'm Prankur Shukla
-          </h1>
-          <div className="text-xl md:text-2xl text-muted-foreground h-[60px] flex items-center justify-center">
-            <Typewriter
-              options={{
-                strings: [
-                  'Full-stack Developer',
-                  'Machine Learning Engineer',
-                  'Backend Developer'
-                ],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 50,
-                delay: 80,
-              }}
-            />
-          </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Crafting modern web applications with passion and precision.
-            Specializing in React, Next.js, and Node.js.
-          </p>
-          <div className="flex gap-4 justify-center pt-4">
-            <Button asChild size="lg" className="group">
-              <Link href="/projects" className="gap-2">
-                View Projects 
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button variant="outline" asChild size="lg">
-              <Link href="/contact">Contact Me</Link>
-            </Button>
-          </div>
-          <div className="flex gap-4 justify-center pt-6">
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Button variant="ghost" size="icon" asChild className="rounded-full">
-                <Link href="https://github.com/PrankurShukla" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5" />
-                </Link>
-              </Button>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Button variant="ghost" size="icon" asChild className="rounded-full">
-                <Link href="https://www.linkedin.com/in/prankur-shukla-07bb18241/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-5 w-5" />
-                </Link>
-              </Button>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Button variant="ghost" size="icon" asChild className="rounded-full">
-                <Link href="mailto:shuklaprankur27@gmail.com">
-                  <Mail className="h-5 w-5" />
-                </Link>
-              </Button>
-            </motion.div>
+          {/* Profile Image */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-4">
+            <div className="flex-shrink-0 mb-4 md:mb-0">
+              <Image
+                src="/prankur_imag.jpg"
+                alt="Prankur Shukla"
+                width={160}
+                height={160}
+                className="rounded-full shadow-lg border-4 border-gray-800 object-cover"
+                priority
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">
+                I'm Prankur Shukla
+              </h1>
+              <div className="text-xl md:text-2xl text-muted-foreground h-[60px] flex items-center justify-center md:justify-start">
+                <Typewriter
+                  options={{
+                    strings: [
+                      'Full-stack Developer',
+                      'Machine Learning Engineer',
+                      'Backend Developer'
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 50,
+                    delay: 80,
+                  }}
+                />
+              </div>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
+                Crafting modern web applications with passion and precision.<br />
+                Specializing in React, Next.js, and Node.js.
+              </p>
+              <div className="flex gap-4 justify-center md:justify-start pt-4">
+                <Button asChild size="lg" className="group">
+                  <Link href="/projects" className="gap-2">
+                    View Projects 
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild size="lg">
+                  <Link href="/contact">Contact Me</Link>
+                </Button>
+              </div>
+              <div className="flex gap-4 justify-center md:justify-start pt-6">
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <Button variant="ghost" size="icon" asChild className="rounded-full">
+                    <Link href="https://github.com/PrankurShukla" target="_blank" rel="noopener noreferrer">
+                      <Github className="h-5 w-5" />
+                    </Link>
+                  </Button>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <Button variant="ghost" size="icon" asChild className="rounded-full">
+                    <Link href="https://www.linkedin.com/in/prankur-shukla-07bb18241/" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="h-5 w-5" />
+                    </Link>
+                  </Button>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <Button variant="ghost" size="icon" asChild className="rounded-full">
+                    <Link href="mailto:shuklaprankur27@gmail.com">
+                      <Mail className="h-5 w-5" />
+                    </Link>
+                  </Button>
+                </motion.div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>
